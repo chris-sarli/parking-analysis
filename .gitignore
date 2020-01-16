@@ -4,3 +4,4 @@
 /notebooks/data/*
 /notebooks/logs/*
 /notebooks/images/*
+/.ipynb_checkpoints
