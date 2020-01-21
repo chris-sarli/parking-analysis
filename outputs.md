@@ -5,28 +5,28 @@
 |  type    |   total |   regular |   disabled |
 | :--------|--------:|----------:|-----------:|
 |  street  |    2163 |      2163 |            |
-|  surface |    8026 |      7867 |        159 |
-|  TOTAL   |   10189 |     10030 |        159 |
+|  surface |    8135 |      7971 |        164 |
+|  TOTAL   |   10298 |     10134 |        164 |
 
 ## Land Use
 
 |  type       |   area |   area_square_miles |   percent_parking_area |   percent_downtown_area |
 | :-----------|-------:|--------------------:|-----------------------:|------------------------:|
-|  surface    | 251990 |           0.0972939 |                  70.57 |                   12.49 |
-|  structured | 105105 |           0.0405813 |                  29.43 |                    5.21 |
-|  TOTAL      | 357095 |           0.137875  |                 100    |                   17.7  |
+|  surface    | 249229 |           0.0962278 |                  69.54 |                   12.35 |
+|  structured | 109159 |           0.0421465 |                  30.46 |                    5.41 |
+|  TOTAL      | 358388 |           0.138374  |                 100    |                   17.76 |
 
 ## Additional Counts
 
-- % of Surface Lots with `capacity:disabled` set: `29.03225806451613`
+- % of Surface Lots with `capacity:disabled` set: `29.78723404255319`
 
-	- Number of Surface Lots with `capacity` set: `186`
+	- Number of Surface Lots with `capacity` set: `188`
 
-	- Number of Surface Lots with `capacity:disabled` set: `54`
+	- Number of Surface Lots with `capacity:disabled` set: `56`
 
-- number of disabled spaces per *all* surface lots with `capacity` set: `0.8548387096774194`
+- number of disabled spaces per *all* surface lots with `capacity` set: `0.8723404255319149`
 
-- number of disabled spaces per surface lots with `capacity:disabled` set: `2.9444444444444446`
+- number of disabled spaces per surface lots with `capacity:disabled` set: `2.9285714285714284`
 
 ## Images
 

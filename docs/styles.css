@@ -1,0 +1,72 @@
+* {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body {
+	font-family: 'Avenir Next', 'HelveticaNeue-Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 1.125em;
+    word-wrap: break-word;
+    -webkit-text-size-adjust: 100%;
+    margin: 0;
+margin-bottom: 20px;
+}
+
+article {
+	max-width: 700px;
+	margin: 0 auto;
+	padding: 20px;
+	box-sizing: border-box;
+}
+
+h1, h2 {
+	text-align: center;
+}
+
+h1 {
+	font-size: 2.2rem;
+}
+
+h2 {
+	font-size: 1.7rem;
+}
+
+iframe {
+	border: none;
+	width: 100%;
+	height: 400px;
+}
+
+.caption {
+	opacity: 0.8;
+	font-size: 1rem;
+	padding-top: 20px;
+}
+
+.credits {
+	text-align: center;
+	margin: 0px;
+}
+
+.div2 {
+	width: 55%;
+	height: 1px;
+	margin: 25px auto 25px auto;
+	border-top: 1px dashed black;
+}
+
+.figure {
+	color: DARKRED;
+	background-color: SEASHELL;
+}
+
+.figure, .mono {
+	font-family: 'Courier New', monospace;
+	font-size: 1.1rem;
+	white-space: nowrap;
+}
+
+.note {
+	border-left: 3px solid #eee;
+	padding-left: 10px;
+}
