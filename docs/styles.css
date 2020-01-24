@@ -19,7 +19,7 @@ article {
 	box-sizing: border-box;
 }
 
-h1, h2 {
+h1, h2, h3 {
 	text-align: center;
 }
 
@@ -55,7 +55,7 @@ iframe {
 	border-top: 1px dashed black;
 }
 
-.figure {
+.figure, td {
 	color: DARKRED;
 	background-color: SEASHELL;
 }
@@ -69,4 +69,43 @@ iframe {
 .note {
 	border-left: 3px solid #eee;
 	padding-left: 10px;
+}
+
+
+
+
+.tg  {border-collapse:collapse;border-spacing:0;font-size: 0.8rem;vertical-align: center;text-align: center;
+overflow-x: scroll;
+max-width: 100%;
+}
+
+.tg td, .tg th {
+	padding:10px 5px;border-style:solid;border-width:1px;border-color:black;
+	background-color: SEASHELL;
+}
+
+.tg td {
+	font-family: 'Courier New', monospace;
+	white-space: nowrap;
+}
+
+.tg th, .tg td:first-of-type {
+	text-align: center;
+	color: black;
+	background-color: #f4f4f4;
+	font-family: inherit;
+}
+
+.total td{
+	background-color: #FFEAE5;
+	font-weight: bold;
+}
+
+.total td:first-of-type {
+	background-color: #e8e8e8;
+}
+
+.table_container {
+	max-width: 100%;
+	overflow-x: scroll;
 }
