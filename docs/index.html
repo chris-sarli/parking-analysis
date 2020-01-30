@@ -1,22 +1,36 @@
 <html>
+
 <head>
-	<title>Downtown Providence Parking Analysis</title>
+	<title>Downtown Providence Parking</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="styles.css" rel="stylesheet">
+	<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+	<link rel="manifest" href="favicon/site.webmanifest">
 </head>
+
 <body>
 	<article>
 		<h1>
 			Downtown Providence Parking
 		</h1>
-		<p>
-			Providence has too much parking. I counted.
-		</p>
-				<p>This is a map of all the parking in Downtown Providence. For the purposes of this page, &ldquo;Downtown&rdquo; refers to <a href="https://www.openstreetmap.org/way/760877861" target="_blank">this area</a>, adapted from <a href="http://pvdgis.maps.arcgis.com/home/item.html?id=07555d51a34a4fa0a43e9c920f68970f" target="_blank">official sources</a>.</p>
+		<p>This is a map of all the parking in Downtown Providence. For the purposes of this page,
+			&ldquo;Downtown&rdquo; refers to <a href="https://www.openstreetmap.org/way/760877861" target="_blank">this
+				area</a>, adapted from <a
+				href="http://pvdgis.maps.arcgis.com/home/item.html?id=07555d51a34a4fa0a43e9c920f68970f"
+				target="_blank">official sources</a>.</p>
 		<iframe src="./map.html"></iframe>
 		<p class="credits caption">You can open the above map in a <a href="./map.html" target="_blank">new tab.</a></p>
 		<p>
-			This page is generated from OpenStreetMap data, much of which was added by me. Therefore, these counts aren&rsquo;t official, and are definitely prone to error. If you see a data error and feel up for fixing it on OSM, eventually the change will be reflected here. This page was last updated on 26 January, 2020.
+			This page is generated from OpenStreetMap data, much of which was added by me. Therefore, these counts
+			aren&rsquo;t official, and are definitely prone to error. If you see a data error and feel up for fixing it
+			on OSM, eventually the change will be reflected here. This page was last updated on 29 January 2020.
+		</p>
+		<p>
+			<span class="figure">monospaced red text like this</span> indicates a number or text that was <a
+				href="https://github.com/chris-sarli/parking-analysis/blob/master/notebooks/make.ipynb"
+				target="_blank">computed programmatically.</a>
 		</p>
 		<h2>Findings</h2>
 		<div class="table_container">
@@ -31,25 +45,25 @@
 				</tr>
 				<tr>
 					<td>Surface</td>
-					<td>191</td>
-					<td>8,296</td>
+					<td>193</td>
+					<td>8,320</td>
 					<td>164</td>
-					<td>2,725,220.02 ft<sup>2</sup></td>
+					<td>2,726,849.68 ft<sup>2</sup></td>
 					<td>12.55%</td>
 				</tr>
 				<tr>
 					<td>Structured</td>
 					<td>15</td>
-					<td>13,534</td>
-					<td>127</td>
+					<td>13,614</td>
+					<td>127<strong>*</strong></td>
 					<td>913,287.07 ft<sup>2</sup></td>
 					<td>4.2%</td>
 				</tr>
 				<tr>
 					<td>Underground</td>
-					<td>7</td>
-					<td>1,476</td>
-					<td>9</td>
+					<td>11</td>
+					<td>1,832<strong>*</strong></td>
+					<td>9<strong>*</strong></td>
 					<td>--</td>
 					<td>--</td>
 				</tr>
@@ -63,71 +77,152 @@
 				</tr>
 				<tr class="total">
 					<td>Combined</td>
-					<td>213</td>
-					<td>25,469</td>
-					<td>300</td>
+					<td>219</td>
+					<td>25,929<strong>*</strong></td>
+					<td>300<strong>*</strong></td>
 					<td>0.1424 miles<sup>2</sup></td>
-					<td>18.273%</td>
+					<td>18.28%</td>
 				</tr>
 			</table>
 		</div>
-		
+
+		<p class="credits caption"><strong>*</strong> Indicated figures are based on incomplete data and are low.</p>
+
 		<h3>Street Parking</h3>
-		<p>On-street parking occupies valuable public space that could be used for transit-only lanes, wider sidewalks, cycling tracks, trees, and other wonderful things. When street parking is free in dense, mixed-use urban areas, <a href="https://www.youtube.com/watch?v=83xZLyQW7a4" target="_blank">numerous problems arise.</a></p>
-		<p>There are approximately <span class="figure">2,163</span> on-street parking spaces. Some are metered or otherwise restricted, others are not. In some areas, like on Eddy Street behind City Hall, people regularly park on sidewalks.</p>
-		<p>If we approximate the dimensions of the average on-street parking space as <span class="figure">9 feet</span> by <span class="figure">17 feet</span>, we find that on-street parking accounts for <span class="figure">330,939.0 ft<sup>2</sup></span>. The total area of the Downtown neighborhood is <span class="figure">0.78 miles<sup>2</sup></span>, so street parking accounts for approximately <span class="figure">1.52%</span> of the Downtown land area.</p>
-		
+		<p>There are approximately <span class="figure">2,163</span> on-street parking spaces. Some are
+			metered or otherwise restricted, others are not. In some areas, like on Eddy Street behind City Hall, people
+			regularly park on sidewalks.</p>
+		<p>If we approximate the dimensions of the average on-street parking space as <span
+				class="figure">9 feet</span> by <span class="figure">17 feet</span>, we find that
+			on-street parking accounts for <span class="figure">330,939.0 ft<sup>2</sup></span>. The total area of the Downtown
+			neighborhood is <span class="figure">0.78 miles<sup>2</sup></span>, so street parking accounts for approximately
+			<span class="figure">1.52%</span> of the Downtown land area.</p>
+
 		<h3>Surface Parking</h3>
-		<p>&ldquo;Surface parking&rdquo; refers to parking lots that are exclusively on ground level. When they are clustered together in urban areas they form parking craters just waiting to be <a href="https://usa.streetsblog.org/2019/04/23/your-parking-madness-2019-champion-providence/" target="_blank">filled in.</a></p>
-		<p>There are roughly <span class="figure">8,296</span> spaces in <span class="figure">191</span> surface lots. The average capacity of surface lots is <span class="figure">43.4</span>, and the median capacity is <span class="figure">27</span>.</p>
-		<p>Surface lots, combined, have a surface area of <span class="figure">2,725,220.02 ft<sup>2</sup></span> (<span class="figure">0.0978 mi<sup>2</sup></span>), which translate into roughly <span class="figure">12.55%</span> of the Downtown land area. The average area of these is <span class="figure">14,268.17 ft<sup>2</sup></span>, and the median is <span class="figure">8,197.64 ft<sup>2</sup></span>.</p>
-		<p>Unlike on-street parking, which is typically parallel and relatively space-efficient, parking lots often have inner service roads or lanes, so that cars have space to turn around and maneuver. Given the total area and number of spaces, we can calculate that each individual parking space is responsible for an area of <span class="figure">342.0 ft<sup>2</sup></span>. If the average spot is assumed to be <span class="figure">9 feet</span> &#215; <span class="figure">17 feet</span> = <span class="figure">153 ft<sup>2</sup></span>, each surface space accounts for an additional <span class="figure">188.52 ft<sup>2</sup></span> (<span class="figure">55.2%</span>) for service roads, turn-around space, etc.</p>
-		<p class="note"><em>Note:</em> some commuter lots have notably higher space efficiencies because they block cars in.</p>
-		<p>OpenStreetMap has a <span class="mono">capacity:disabled</span> tag to indicate the number of spaces which are considered (in the US), to be handicapped-accessible. I&rsquo;ve done my best to catalogue these, but paint or signs indicating this in many lots is faded or out of date, so counts may be notably low. That said, the current data on OpenStreetMap suggests that there are <span class="figure">164</span> of these accessible spaces in <span class="figure">56</span> surface lots, approximately <span class="figure">1.98%</span> of the total count of surface lots spaces. Lots with <em>any</em> disabled spaces have an average of <span class="figure">2.93</span> accessible spaces (median of <span class="figure">2.0</span> accessible spaces).
-		<h3>Structured Parking</h3>
-		<p>&ldquo;Structured parking&rdquo; refers to multi-story, above-ground parking garages, indicated by the OpenStreetMap <span class="mono">multi-storey</span> tag. They are more space-efficient than surface lots (though they are still hugely space-inefficient). Some in Providence include street-level retail and decorative facades, which mask some of the disappointing reality of upper levels. These design choices introduce some qualitative factors into space efficiency considerations, which I will not explore at present.</p>
-		<p>There are roughly <span class="figure">13,534</span> spaces in <span class="figure">15</span> structured lots. The average capacity of structured lots is <span class="figure">902.267</span>, and the median is <span class="figure">450</span>.</p>
-		<p>Structured lots, combined, have a surface area of <span class="figure">913,287.07 ft<sup>2</sup></span>. The average structured lot area is <span class="figure">60,885.8 ft<sup>2</sup></span>, with a median of <span class="figure">33,372.57 ft<sup>2</sup></span>.</p>
-		<p>If we calculate the average area per space, we find that it is <span class="figure">85.38 ft<sup>2</sup></span>, <span class="figure">75.0%</span> lower than the average space required for a surface space.</p>
-		<p class="note"><em>Note:</em> I&rsquo;m not endorsing replacing all our surface parking with structured parking in the name of efficiency and capacity increases. But I&rsquo;d much rather have one well-designed parking garage with 500 spaces than 15 surface lots with 500 spaces.<p>
-		<p><span class="figure">127</span> accessible spaces in structured garages have been indicated in the OpenStreetMap data. However, several large lots (like the Mall) definitely have accessible spaces but have not been included yet. Thus, it is not advisable to draw any conclusions based on this figure at present.</p>
-		
-		<h3>Underground Parking</h3>
-		<p>Unsurprisingly, this refers to garages that are entirely underground.</p>
-		<p>There are roughly <span class="figure">1,476</span> spaces in <span class="figure">7</span> underground lots. The average capacity of underground lots is <span class="figure">210.857</span>, and the median is <span class="figure">175</span>.</p>
-		<p>While some area is used for entrance/exit ramps to these garages, it is negligible and will not be considered.</p>
-		<p><span class="figure">9</span> accessible underground spaces have been indicated in the OpenStreetMap data. However, several large lots may have accessible spaces, but have not been included. Thus, it is not advisable to draw any conclusions based on this figure at present.</p>
-		
-		<h2>Data Download</h2>
-		
-		<p>Here are some (possibly) useful CSVs you can download. &ldquo;area&rdquo;s are in square meters, and &ldquo;efficiency&rdquo; is a measure of area per space in square meters. Indicies are OSM IDs.</p>
-		<ul>
-			<li><a href="./files/stats.csv">stats.csv</a>: contains a whole bunch of precalculated capacities, areas, means, medians, and more.</li>
-			<li><a href="./files/fp_surface.csv">fp_surface.csv</a>: Contains calculations for individual surface lots.</li>
-			<li><a href="./files/fp_structured.csv">fp_structured.csv</a>: Contains calculations for individual structured garages.</li>
-			<li><a href="./files/fp_underground.csv">fp_underground.csv</a>: Contains calculations for individual underground garages.</li>
-			<li><a href="./files/street_capacities.csv">street_capacities.csv</a>: Contains capacities for various street segments.</li>
-		</ul>
-		
-		<h2>Credits</h2>
-		
-		<p class="credits"><a href="https://github.com/chris-sarli/parking-analysis/blob/master/notebooks/make.ipynb" target="_blank">View Calculations</a></p>
-		<p class="credits"><a href="https://github.com/chris-sarli/parking-analysis" target="_blank">View Project on GitHub</a></p>
-		
-		<div class="div2"></div>
-		
-		<p class="credits">Data Collection, Analysis, Website</p>
-		<p class="credits"><strong><a href="https://twitter.com/chris_sarli" target="_blank">Chris Sarli</a></strong></p>
-		<br/>
-		<p class="credits">Inspired By</p>
-		<p class="credits"><strong><a href="http://www.gcpvd.org/reports/providence-parking-crisis-illustrated/" target="_blank">Greater City Providence</a></strong></p>
-		<br/>
-		<p class="credits">Requested By/In Support Of</p>
-		<p class="credits"><strong><a href="https://ourstreetspvd.org" target="_blank">Our Streets Providence</a></strong></p>
-		<br/>
-		<p class="credits">Data Stored On/Sourced From</p>
-		<p class="credits"><strong><a href="https://openstreetmap.org" target="_blank">OpenStreetMap</a></strong></p>
-		
+		<p>&ldquo;Surface parking&rdquo; refers to parking lots that are exclusively on ground level and are typically
+			uncovered.</p>
+		<p>There are roughly <span class="figure">8,320</span> spaces in <span
+				class="figure">193</span> surface lots. The average capacity of surface lots is <span
+				class="figure">43.1</span>, and the median capacity is <span
+				class="figure">27</span>.</p>
+		<p>Surface lots, combined, have a surface area of <span class="figure">2,726,849.68 ft<sup>2</sup></span> (<span
+				class="figure">0.0978 mi<sup>2</sup></span>), which translates into roughly <span
+				class="figure">12.55%</span> of the Downtown land area. The average area of these is
+			<span class="figure">14,128.75 ft<sup>2</sup></span>, and the median is <span
+				class="figure">8,046.41 ft<sup>2</sup></span>.</p>
+		<p>Unlike on-street parking, which is typically parallel and relatively space-efficient, parking lots often have
+			inner service roads or lanes, so that cars have space to turn around and maneuver. Given the total area and
+			number of spaces, we can calculate that each individual parking space is responsible for an area of <span
+				class="figure">340.0 ft<sup>2</sup></span>. If the average spot is assumed to be <span
+				class="figure">9 feet</span> &#215; <span class="figure">17 feet</span> = <span
+				class="figure">153 ft<sup>2</sup></span>, each surface space accounts for an additional <span
+				class="figure">187.32 ft<sup>2</sup></span> (<span class="figure">55.04%</span>) for service roads,
+			turn-around space, etc.</p>
+		<p class="note"><em>Note:</em> some commuter lots have notably higher space efficiencies because they block cars
+			in.</p>
+		<p>OpenStreetMap has a <span class="mono">capacity:disabled</span> tag to indicate the number of spaces which
+			are considered (in the US), to be handicapped-accessible. I&rsquo;ve done my best to catalogue these, but
+			paint or signs indicating this in many lots is faded or out of date, so counts may be notably low. That
+			said, the current data on OpenStreetMap suggests that there are <span
+				class="figure">164</span> of these accessible spaces in <span
+				class="figure">56</span> surface lots, approximately <span
+				class="figure">1.97%</span> of the total count of surface lots spaces. Lots
+			with <em>any</em> disabled spaces have an average of <span class="figure">2.93</span> accessible
+			spaces (median of <span class="figure">2.0</span> accessible spaces).
+
+			<h3>Structured Parking</h3>
+			<p>&ldquo;Structured parking&rdquo; refers to multi-story, above-ground structures with a primary purpose of
+				providing parking, indicated by the OpenStreetMap <span class="mono">multi-storey</span> tag.</p>
+			<p>There are roughly <span class="figure">13,614</span> spaces in <span
+					class="figure">15</span> structured lots. The average capacity of structured
+				lots is <span class="figure">907.6</span>, and the median is <span
+					class="figure">450</span>.</p>
+			<p>Structured lots, combined, have a surface area of <span class="figure">913,287.07 ft<sup>2</sup></span>. The
+				average structured lot area is <span class="figure">60,885.8 ft<sup>2</sup></span>, with a median of <span
+					class="figure">33,372.57 ft<sup>2</sup></span>.</p>
+			<p>If we calculate the average area per space, we find that it is <span
+					class="figure">84.25 ft<sup>2</sup></span>, <span
+					class="figure">75.24%</span> lower than the average space required for a
+				surface space.</p>
+			<p><span class="figure">127</span> accessible spaces in structured garages have
+				been indicated in the OpenStreetMap data. However, several garages do not publish this information and
+				have not, as of yet, responded to my requests for it. Thus, there is low confidence in this
+				figure&hellip; it is likely higher.</p>
+
+			<h3>Underground Parking</h3>
+			<p>Unsurprisingly, this refers to garages that are entirely underground.</p>
+			<p>There are roughly <span class="figure">1,832</span> spaces in <span
+					class="figure">11</span> underground lots. The average capacity of underground
+				lots is <span class="figure">166.545</span>, and the median is <span
+					class="figure">160</span>.</p>
+			<p>While some area is used for entrance/exit ramps to these garages, it is negligible and will not be
+				considered.</p>
+			<p><span class="figure">9</span> accessible underground spaces have been
+				indicated in the OpenStreetMap data. As with structured parking, this figure has low confidence and is
+				likely higher than reported here.</p>
+
+			<h2>Data Download</h2>
+
+			<p>Here are some (possibly) useful CSVs you can download. &ldquo;area&rdquo;s are in square meters, and
+				&ldquo;efficiency&rdquo; is a measure of area per space in square meters. Indices are OSM IDs.</p>
+			<ul>
+				<li><a href="./files/stats.csv" download>stats.csv</a>: contains a whole bunch of precalculated
+					capacities, areas, means, medians, and more.</li>
+				<li><a href="./files/fp_surface.csv" download>fp_surface.csv</a>: Contains calculations for individual
+					surface lots.</li>
+				<li><a href="./files/fp_structured.csv" download>fp_structured.csv</a>: Contains calculations for
+					individual structured garages.</li>
+				<li><a href="./files/fp_underground.csv" download>fp_underground.csv</a>: Contains calculations for
+					individual underground garages.</li>
+				<li><a href="./files/street_capacities.csv" download>street_capacities.csv</a>: Contains capacities for
+					various street segments.</li>
+			</ul>
+
+			<h2>Opinionated Summary</h2>
+			<p><strong>(Downtown) Providence has too much parking.</strong></p>
+			<p>&ldquo;Downtown&rdquo; today is defined largely by I-95, both in boundary and in land use. On weekdays, a
+				massive amount of land is used to store mostly suburban cars. It&rsquo;s crowded and wasteful. On
+				weekends though, the absence of the workforce leaves it hollow.</p>
+			<p>Thanks to tons of hard work from dedicated members of the community, local officials, and some
+				cooperative private interests, things are turning around. The urban fabric is slowly being mended.
+				Downtown Providence, in my memory, has never been better.</p>
+			<p>Unfortunately, our culture lags behind our needs. The under-construction Garrahy Garage will end up
+				costing a quasi-governmental agency <span style="text-decoration:underline;">more than $31,000 per
+					parking space.</span> Most who approved it see it as a vital incentive to economic growth. In
+				reality it is a ball and chain, ensuring that Providence will be subject to many more decades of the
+				auto-centric obsession that has weakened it so.</p>
+			<p><span style="font-size: 1.15rem;">&#9758; Recommended Reading: <em>The High Cost of Free Parking</em> by
+					Donald Shoup.<br />Please support local booksellers (<a href="https://www.booksq.com"
+						target="_blank">Books on the Square</a> | <a href="https://www.riffraffpvd.com"
+						target="_blank">Riffraff</a> | <a href="https://symposiumbooks.com"
+						target="_blank">Symposium</a>).</p>
+
+			<div class="div2"></div>
+
+			<h2>Credits</h2>
+			<br />
+			<p class="credits">Data Collection, Analysis, and Website by</p>
+			<p class="credits"><strong><a href="https://twitter.com/chris_sarli" target="_blank">Chris
+						Sarli</a></strong></p>
+			<p class="credits"><a
+					href="https://github.com/chris-sarli/parking-analysis/blob/master/notebooks/make.ipynb"
+					target="_blank">View Calculations</a></p>
+			<p class="credits"><a href="https://github.com/chris-sarli/parking-analysis" target="_blank">View Project on
+					GitHub</a></p>
+			<br />
+			<p class="credits">Inspired by</p>
+			<p class="credits"><strong><a href="http://www.gcpvd.org/reports/providence-parking-crisis-illustrated/"
+						target="_blank">Greater City Providence</a></strong></p>
+			<br />
+			<p class="credits">Requested By/In Support of</p>
+			<p class="credits"><strong><a href="https://ourstreetspvd.org" target="_blank">Our Streets
+						Providence</a></strong></p>
+			<br />
+			<p class="credits">Data Stored On/Sourced from</p>
+			<p class="credits"><strong><a href="https://openstreetmap.org" target="_blank">OpenStreetMap</a></strong>
+			</p>
+
 	</article>
 </body>
+
 </html>
