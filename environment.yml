@@ -3,6 +3,7 @@ channels:
   - conda-forge
   - defaults
 dependencies:
+  - affine=2.3.0=py_0
   - appnope=0.1.0=py37_1000
   - attrs=19.3.0=py_0
   - backcall=0.1.0=py_0
@@ -20,6 +21,7 @@ dependencies:
   - click-plugins=1.1.1=py_0
   - cligj=0.5.0=py_0
   - colorama=0.4.3=py_0
+  - contextily=1.0rc2=py_0
   - cryptography=2.8=py37hafa8578_1
   - curl=7.65.3=h22ea746_0
   - cycler=0.10.0=py_2
@@ -28,6 +30,7 @@ dependencies:
   - descartes=1.1.0=py_4
   - entrypoints=0.3=py37_1000
   - expat=2.2.5=h4a8c4bd_1004
+  - fastcache=1.1.0=py37h0b31af3_0
   - fiona=1.8.13=py37he71f6a4_0
   - folium=0.10.1=py_0
   - fontconfig=2.13.1=h6b1039f_1001
@@ -42,6 +45,8 @@ dependencies:
   - gettext=0.19.8.1=h46ab8bc_1002
   - giflib=5.1.7=h01d97ff_1
   - glib=2.58.3=py37h577aef8_1002
+  - gmp=6.1.2=h0a44026_1000
+  - gmpy2=2.1.0b1=py37h4160ff4_0
   - hdf4=4.2.13=h84186c3_1003
   - hdf5=1.10.5=nompi_h3e39495_1104
   - icu=64.2=h6de7cb9_1
@@ -50,6 +55,7 @@ dependencies:
   - ipykernel=5.1.3=py37h5ca1d4c_0
   - ipython=7.11.1=py37h5ca1d4c_0
   - ipython_genutils=0.2.0=py_1
+  - ipywidgets=7.5.1=py_0
   - jedi=0.15.2=py37_0
   - jinja2=2.10.3=py_0
   - joblib=0.14.1=py_0
@@ -92,8 +98,13 @@ dependencies:
   - markupsafe=1.1.1=py37h0b31af3_0
   - matplotlib=3.1.2=py37_1
   - matplotlib-base=3.1.2=py37h11da6c2_1
+  - measurement=3.2.0=py_0
+  - mercantile=1.1.2=py_0
   - mistune=0.8.4=py37h0b31af3_1000
   - more-itertools=8.0.2=py_0
+  - mpc=1.1.0=h4160ff4_1006
+  - mpfr=4.0.2=h44b798e_0
+  - mpmath=1.1.0=py_0
   - munch=2.5.0=py_0
   - nbconvert=5.6.1=py37_0
   - nbformat=4.4.0=py_1
@@ -101,6 +112,7 @@ dependencies:
   - networkx=2.4=py_0
   - notebook=6.0.1=py37_0
   - numpy=1.17.3=py37hde6bac1_0
+  - olefile=0.46=py_0
   - openjpeg=2.3.1=hcdae239_3
   - openssl=1.1.1d=h0b31af3_0
   - osmnx=0.11=py_0
@@ -111,6 +123,7 @@ dependencies:
   - pcre=8.43=h4a8c4bd_0
   - pexpect=4.7.0=py37_0
   - pickleshare=0.7.5=py37_1000
+  - pillow=7.0.0=py37h918e99a_0
   - pip=19.3.1=py37_0
   - pixman=0.38.0=h01d97ff_1003
   - poppler=0.67.0=h16886b5_8
@@ -131,6 +144,8 @@ dependencies:
   - python-dateutil=2.8.1=py_0
   - pytz=2019.3=py_0
   - pyzmq=18.1.1=py37h4bf09a9_0
+  - qgrid=1.1.1=py37_1001
+  - rasterio=1.1.2=py37he71f6a4_0
   - readline=8.0=hcfe32e1_0
   - requests=2.22.0=py37_1
   - rtree=0.9.3=py37h7b0cdae_0
@@ -140,7 +155,10 @@ dependencies:
   - setuptools=42.0.2=py37_0
   - shapely=1.6.4=py37h999ffa5_1007
   - six=1.13.0=py37_0
+  - snuggs=1.4.7=py_0
   - sqlite=3.30.1=h93121df_0
+  - sympy=1.5.1=py37_0
+  - tabulate=0.8.6=py_0
   - tbb=2018.0.5=h2d50403_0
   - termcolor=1.1.0=py_2
   - terminado=0.8.3=py37_0
@@ -155,6 +173,7 @@ dependencies:
   - wcwidth=0.1.8=py_0
   - webencodings=0.5.1=py_1
   - wheel=0.33.6=py37_0
+  - widgetsnbextension=3.5.1=py37_0
   - xerces-c=3.2.2=hbda6038_1004
   - xz=5.2.4=h1de35cc_1001
   - zeromq=4.3.2=h6de7cb9_2
