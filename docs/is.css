@@ -1,0 +1,105 @@
+body {
+	margin: 0;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	justify-content: flex-start;
+	font-family: "Avenir Next", sans-serif;
+	color: white;
+}
+
+iframe {
+	border: none;
+	height: 100%;
+	width: calc(100% - 500px);
+}
+
+#symbol {
+	margin: 0 auto;
+	margin-top: 25px;
+	width: 70px;
+	height: 70px;
+	border: 5px solid white;
+	border-radius: 50%;
+	box-sizing: border-box;
+	text-align: center;
+	font-size: 3rem;
+	font-weight: bold;
+}
+
+#side {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	box-sizing: border-box;
+	overflow-y: scroll;
+	width: 500px;
+	height: 100%;
+	background-color: #945100;
+}
+	
+#side > * {
+	box-size: border-box;
+}
+	
+h1, h2 {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	text-align: center;
+}
+
+h1 {
+	font-size: 1.8rem;
+	margin-top:20px;
+}
+
+.subtitle {
+	text-align: center;
+	font-style: italic;
+	margin-bottom: 20px;
+}
+
+
+.tile {
+	box-sizing: border-box;
+	width: 100%;
+	padding: 15px 30px 15px 30px;
+	font-size: 1.2rem;
+}
+
+.tile:hover {
+	background-color: rgba(0, 0, 0, 0.07);
+}
+
+.tile p {
+	margin: 0;
+}
+
+.s1 {
+	margin-top: 3px;
+	font-size:3rem;
+}
+
+.s2 {
+	font-size: 1.8rem;
+}
+
+.s3 {
+	text-align: right;
+	font-style: italic;
+}
+
+.s3 span {
+	font-size: 2rem;
+	line-height: 1rem;
+	position: relative;
+	top: 0.22rem;
+	right: 0.2rem;
+}
+
+.tile ul {
+	margin: 0;
+	margin-top: 3px;
+}
